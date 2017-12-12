@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
+import org.superbiz.moviefun.albumsapi.AlbumsClient;
 import org.superbiz.moviefun.moviesapi.MoviesClient;
 
 @Configuration
@@ -20,5 +21,12 @@ public class ClientConfiguration {
     @Bean
     public MoviesClient moviesClient(RestOperations restOperations) {
         return new MoviesClient(moviesUrl, restOperations);
+    }
+
+    @Value("${albums.url}") String albumsUrl;
+
+    @Bean
+    public AlbumsClient albumsClient(RestOperations restOperations) {
+        return new AlbumsClient(albumsUrl, restOperations);
     }
 }
