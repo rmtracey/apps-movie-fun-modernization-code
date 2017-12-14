@@ -13,8 +13,8 @@ import org.superbiz.moviefun.blobstore.BlobStore;
 import org.superbiz.moviefun.blobstore.S3Store;
 import org.superbiz.moviefun.moviesapi.MovieServlet;
 
-@SpringBootApplication
 @EnableEurekaClient
+@SpringBootApplication
 public class Application {
 
     public static void main(String... args) {

@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.superbiz.moviefun.blobstore.BlobStore;
 import org.superbiz.moviefun.blobstore.S3Store;
 
-@SpringBootApplication
 @EnableEurekaClient
+@SpringBootApplication
 public class AlbumServiceApplication {
     public static void main(String... args) {
         SpringApplication.run(AlbumServiceApplication.class, args);

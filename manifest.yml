@@ -7,7 +7,7 @@ services:
 applications:
 - name: album-service
   routes:
-  - route: album-service-rtracey.apps.longs.pal.pivotal.io/albums
+  - route: album-service-rtracey.apps.longs.pal.pivotal.io
   path: applications/album-service/build/libs/album-service-1.1.0-SNAPSHOT.jar
   services:
   - album-database
@@ -15,7 +15,7 @@ applications:
     GRANT_TYPE: client_credentials
 - name: movie-service
   routes:
-  - route: movie-service-rtracey.apps.longs.pal.pivotal.io/movies
+  - route: movie-service-rtracey.apps.longs.pal.pivotal.io
   path: applications/movie-service/build/libs/movie-service-1.1.0-SNAPSHOT.jar
   services:
   - movie-database
