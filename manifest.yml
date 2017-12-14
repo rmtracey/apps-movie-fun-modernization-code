@@ -18,4 +18,6 @@ applications:
   env:
     GRANT_TYPE: client_credentials
 - name: movie-fun-app
+  services:
+  - movie-fun-config
   path: applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war
